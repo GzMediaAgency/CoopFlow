@@ -8,19 +8,33 @@ const PUBLIC = ["/login", "/register", "/forgot-password", "/reset-password", "/
 
 export default async function middleware(req: NextRequest) {
   const res = intl(req);
-  const supabase = createServerClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!, {
-    cookies: {
-      getAll: () => req.cookies.getAll(),
-      setAll: (list: { name: string; value: string; options?: any }[]) => list.forEach(({ name, value, options }) => res.cookies.set(name, value, options)),
-    },
-  });
-  const { data } = await supabase.auth.getUser();
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-  const locale = routing.locales.find((l) => req.nextUrl.pathname.startsWith(`/${l}`)) ?? routing.defaultLocale;
-  const path = req.nextUrl.pathname.replace(new RegExp(`^/${locale}`), "") || "/";
-  if (!data.user && !PUBLIC.some((p) => path.startsWith(p))) {
-    return NextResponse.redirect(new URL(`/${locale}/login`, req.url));
+  if (!supabaseUrl || !supabaseAnonKey) {
+    console.error("[Middleware] Missing NEXT_PUBLIC_SUPABASE_URL or NEXT_PUBLIC_SUPABASE_ANON_KEY in environment variables.");
+    return res;
   }
+
+  try {
+    const supabase = createServerClient(supabaseUrl, supabaseAnonKey, {
+      cookies: {
+        getAll: () => req.cookies.getAll(),
+        setAll: (list: { name: string; value: string; options?: any }[]) =>
+          list.forEach(({ name, value, options }) => res.cookies.set(name, value, options)),
+      },
+    });
+    const { data } = await supabase.auth.getUser();
+
+    const locale = routing.locales.find((l) => req.nextUrl.pathname.startsWith(`/${l}`)) ?? routing.defaultLocale;
+    const path = req.nextUrl.pathname.replace(new RegExp(`^/${locale}`), "") || "/";
+    if (!data?.user && !PUBLIC.some((p) => path.startsWith(p))) {
+      return NextResponse.redirect(new URL(`/${locale}/login`, req.url));
+    }
+  } catch (e) {
+    console.error("[Middleware] Auth check error:", e);
+  }
+
   return res;
 }
 export const config = { matcher: ["/((?!api|auth|_next|.*\\..*).*)"] };

@@ -1,0 +1,1502 @@
+{
+  "brand": {
+    "name": "CoopFlow",
+    "tagline": "La gestion simple et intelligente de votre coopérative."
+  },
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "members": "Membres",
+    "production": "Production",
+    "products": "Produits",
+    "stock": "Stocks",
+    "orders": "Commandes",
+    "customers": "Clients",
+    "suppliers": "Fournisseurs",
+    "sales": "Ventes",
+    "invoices": "Factures",
+    "payments": "Paiements",
+    "expenses": "Dépenses",
+    "contributions": "Cotisations",
+    "reports": "Rapports",
+    "documents": "Documents",
+    "settings": "Paramètres",
+    "home": "Accueil",
+    "menu": "Menu",
+    "soon": "Bientôt",
+    "groups": {
+      "overview": "Pilotage",
+      "activity": "Activité",
+      "commerce": "Commerce",
+      "finance": "Finance",
+      "admin": "Gestion"
+    },
+    "logout": "Se déconnecter",
+    "import": "Import de données",
+    "contact": "Contact & Paiement",
+    "contactSupport": "Support & RIB CIH"
+  },
+  "topbar": {
+    "search": "Rechercher un membre, un produit, une facture…",
+    "notifications": "Notifications",
+    "language": "Langue"
+  },
+  "dashboard": {
+    "welcome": "Bonjour, bienvenue dans votre espace CoopFlow.",
+    "revenue": "Chiffre d'affaires du mois",
+    "orders": "Commandes du mois",
+    "products": "Produits actifs",
+    "members": "Membres actifs",
+    "receivables": "Créances",
+    "salesTrend": "Évolution des ventes (6 mois)",
+    "alerts": "Alertes",
+    "noAlerts": "Tout est en ordre.",
+    "noData": "Rien à afficher pour le moment.",
+    "recentOrders": "Dernières commandes",
+    "recentPayments": "Derniers paiements reçus",
+    "outOfStock": "{name} est épuisé",
+    "lowStock": "Stock faible : {name} ({qty} restants)",
+    "overdueInvoices": "{count} facture(s) en retard de paiement",
+    "lateContributions": "{count} cotisation(s) en retard"
+  },
+  "auth": {
+    "login": "Se connecter",
+    "email": "Adresse e-mail",
+    "password": "Mot de passe",
+    "invalid": "E-mail ou mot de passe incorrect. Vérifiez vos informations et réessayez.",
+    "loginIntro": "Connectez-vous à votre espace.",
+    "forgot": "Mot de passe oublié ?",
+    "noAccount": "Créer ma coopérative",
+    "register": "Créer mon compte",
+    "registerTitle": "Créez votre coopérative sur CoopFlow",
+    "registerIntro": "14 jours d’essai, sans carte bancaire.",
+    "orgName": "Nom de la coopérative",
+    "fullName": "Votre nom complet",
+    "confirmPassword": "Confirmez le mot de passe",
+    "passwordHint": "8 caractères minimum.",
+    "haveAccount": "J’ai déjà un compte",
+    "checkEmail": "Compte créé. Vérifiez votre boîte mail pour confirmer votre adresse, puis connectez-vous.",
+    "forgotTitle": "Mot de passe oublié",
+    "forgotIntro": "Saisissez votre e-mail : nous vous envoyons un lien pour choisir un nouveau mot de passe.",
+    "sendLink": "Envoyer le lien",
+    "forgotSent": "Si un compte existe pour cette adresse, un e-mail avec un lien de réinitialisation vient d’être envoyé.",
+    "backToLogin": "Retour à la connexion",
+    "resetTitle": "Choisissez un nouveau mot de passe",
+    "newPassword": "Nouveau mot de passe",
+    "savePassword": "Enregistrer le mot de passe",
+    "resetExpired": "Ce lien a expiré ou n’est plus valide."
+  },
+  "errors": {
+    "generic": "Impossible d'enregistrer les données. Vérifiez votre connexion et réessayez.",
+    "productNotFound": "Ce produit est introuvable ou inactif.",
+    "memberNotFound": "Ce membre est introuvable.",
+    "insufficientStock": "Stock insuffisant pour cette opération.",
+    "invalidQuantity": "La quantité doit être supérieure à zéro.",
+    "batchTaken": "Ce numéro de lot existe déjà.",
+    "batchNotFound": "Ce lot est introuvable pour ce produit.",
+    "inventoryClosed": "Cet inventaire est déjà validé ou fermé.",
+    "nothingCounted": "Saisissez au moins une quantité réelle avant de valider.",
+    "noProducts": "Ajoutez d’abord des produits.",
+    "orderNotFound": "Commande introuvable.",
+    "invalidTransition": "Ce changement de statut n’est pas possible.",
+    "customerNotFound": "Client introuvable.",
+    "invalidLines": "Une ligne du document est invalide (produit, quantité, prix ou remise).",
+    "numberTaken": "Impossible d’attribuer un numéro de document. Réessayez.",
+    "invoiceNotPayable": "Cette facture ne peut plus recevoir de paiement.",
+    "overpayment": "Le montant dépasse le reste à payer de la facture.",
+    "invalidAmount": "Le montant doit être supérieur à zéro.",
+    "supplierNotFound": "Fournisseur introuvable.",
+    "emailTaken": "Un compte existe déjà avec cette adresse e-mail.",
+    "authFailed": "Impossible de créer le compte. Vérifiez vos informations et réessayez.",
+    "resetFailed": "Impossible de changer le mot de passe. Demandez un nouveau lien.",
+    "forbidden": "Vous n’avez pas le droit de modifier ces informations.",
+    "planLimit": "Le nombre d’utilisateurs de votre plan est atteint.",
+    "roleNotFound": "Rôle introuvable.",
+    "userNotFound": "Utilisateur introuvable.",
+    "lastAdmin": "Il doit rester au moins un administrateur actif.",
+    "selfAction": "Vous ne pouvez pas modifier votre propre compte ici.",
+    "inviteUnavailable": "L’envoi d’invitations n’est pas configuré sur ce serveur.",
+    "inviteFailed": "Impossible d’envoyer l’invitation. Vérifiez l’adresse e-mail.",
+    "contributionNotFound": "Cotisation introuvable.",
+    "fileRequired": "Choisissez un fichier.",
+    "fileTooBig": "Le fichier dépasse 10 Mo.",
+    "fileType": "Format non accepté. Utilisez PDF, image, Word, Excel ou CSV.",
+    "storageUnavailable": "Le stockage de fichiers n’est pas configuré sur ce serveur.",
+    "storageFailed": "Le fichier n’a pas pu être enregistré. Réessayez.",
+    "documentNotFound": "Document introuvable.",
+    "planNotFound": "Plan introuvable.",
+    "emptyImport": "Le fichier ne contient aucune ligne de données.",
+    "tooManyRows": "Le fichier dépasse 1 000 lignes : découpez-le en plusieurs fichiers.",
+    "invalidImport": "Import invalide. Rechargez la page et réessayez.",
+    "importHasErrors": "Corrigez les erreurs ou cochez « ignorer les lignes en erreur ».",
+    "nothingToImport": "Aucune ligne valide à importer.",
+    "unreadableFile": "Impossible de lire ce fichier. Utilisez un fichier .xlsx ou .csv.",
+    "emailUnavailable": "L’envoi d’e-mails n’est pas encore configuré sur ce serveur.",
+    "customerNoEmail": "Ce client n’a pas d’adresse e-mail valide.",
+    "emailRateLimit": "Limite d’envoi atteinte (60 e-mails par heure). Réessayez plus tard.",
+    "emailFailed": "L’e-mail n’a pas pu être envoyé. Réessayez.",
+    "reminderRecent": "Une relance a déjà été envoyée ces 3 derniers jours.",
+    "invoiceNotFound": "Facture introuvable.",
+    "waUnavailable": "Le module WhatsApp n’est pas encore activé sur ce serveur.",
+    "waDisabled": "WhatsApp n’est pas activé pour votre coopérative (ou n’est pas inclus dans votre plan).",
+    "customerNoPhone": "Ce client n’a pas de numéro de téléphone valide.",
+    "waRateLimit": "Limite d’envoi WhatsApp atteinte (60 messages par heure).",
+    "waFailed": "Le message WhatsApp n’a pas pu être envoyé. Réessayez.",
+    "overDebt": "Le montant dépasse la dette envers ce fournisseur."
+  },
+  "currency": "MAD",
+  "notif": {
+    "lowStock": "Stock faible : {product}",
+    "outOfStock": "Produit épuisé : {product}",
+    "lateContribution": "Cotisation en retard : {member}",
+    "unpaidInvoice": "Facture impayée : {number}",
+    "newOrder": "Nouvelle commande : {number}"
+  },
+  "common": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "prev": "Précédent",
+    "next": "Suivant",
+    "pageOf": "Page {page} sur {pages}"
+  },
+  "validation": {
+    "required": "Ce champ est obligatoire.",
+    "tooLong": "Texte trop long.",
+    "invalidCin": "CIN invalide (ex. : JB123456).",
+    "invalidPhone": "Numéro invalide (ex. : 0612345678).",
+    "invalidEmail": "Adresse e-mail invalide.",
+    "invalidDate": "Date invalide.",
+    "invalidNumber": "Nombre invalide.",
+    "invalidSku": "SKU invalide (2 à 30 caractères : lettres, chiffres, - _ .).",
+    "skuTaken": "Ce SKU existe déjà. Choisissez-en un autre.",
+    "invalidBatch": "N° de lot invalide (3 à 40 caractères : lettres, chiffres, - _ .).",
+    "batchTaken": "Ce numéro de lot existe déjà.",
+    "invalidIce": "L’ICE comporte 15 chiffres.",
+    "noLines": "Ajoutez au moins un produit.",
+    "invalidLines": "Une ligne est invalide.",
+    "passwordShort": "Le mot de passe doit contenir entre 8 et 72 caractères.",
+    "passwordMismatch": "Les deux mots de passe ne sont pas identiques.",
+    "invalidPrefix": "2 à 6 lettres majuscules (ex. : FAC).",
+    "duplicateInFile": "Doublon dans le fichier.",
+    "duplicateExisting": "Existe déjà dans CoopFlow.",
+    "unknownSku": "Référence inconnue : créez d’abord le produit.",
+    "invalid": "Valeur invalide."
+  },
+  "members": {
+    "title": "Membres",
+    "add": "+ Ajouter un membre",
+    "edit": "Modifier",
+    "export": "Exporter",
+    "searchPlaceholder": "Rechercher par nom, CIN, téléphone…",
+    "allStatuses": "Tous les statuts",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucun membre ne correspond à votre recherche.",
+    "count": "{count} membre(s)",
+    "empty": {
+      "title": "Vous n’avez encore aucun membre.",
+      "text": "Ajoutez vos membres pour suivre leurs parts, leurs cotisations et leurs livraisons au même endroit.",
+      "cta": "+ Ajouter le premier membre"
+    },
+    "cols": {
+      "member": "Membre",
+      "cin": "CIN",
+      "phone": "Téléphone",
+      "joinedAt": "Adhésion",
+      "status": "Statut",
+      "shares": "Parts",
+      "balance": "Reste à payer"
+    },
+    "status": {
+      "ACTIVE": "Actif",
+      "INACTIVE": "Inactif",
+      "SUSPENDED": "Suspendu",
+      "LEFT": "Sorti"
+    },
+    "sections": {
+      "personal": "Informations personnelles",
+      "coop": "Informations coopérative",
+      "contributions": "Cotisations",
+      "production": "Dernières productions"
+    },
+    "fields": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "cin": "CIN",
+      "birthDate": "Date de naissance",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "address": "Adresse",
+      "city": "Ville",
+      "joinedAt": "Date d’adhésion",
+      "role": "Fonction",
+      "groupName": "Groupe",
+      "status": "Statut",
+      "sharesCount": "Nombre de parts",
+      "shareValue": "Valeur d’une part (MAD)",
+      "notes": "Notes"
+    },
+    "profile": {
+      "paidOf": "{paid} payés sur {due} attendus",
+      "remaining": "reste à payer",
+      "noProduction": "Aucune production enregistrée pour ce membre."
+    },
+    "archive": {
+      "label": "Archiver",
+      "title": "Archiver ce membre ?",
+      "message": "Le membre n’apparaîtra plus dans la liste, mais son historique (production, cotisations, paiements) est conservé.",
+      "confirm": "Oui, archiver"
+    }
+  },
+  "orderStatus": {
+    "DRAFT": "Brouillon",
+    "NEW": "Nouvelle",
+    "CONFIRMED": "Confirmée",
+    "PREPARING": "En préparation",
+    "READY": "Prête",
+    "SHIPPED": "Expédiée",
+    "DELIVERED": "Livrée",
+    "CANCELLED": "Annulée"
+  },
+  "units": {
+    "UNIT": "unité",
+    "KG": "kg",
+    "G": "g",
+    "LITER": "litre",
+    "CRATE": "caisse",
+    "TON": "tonne",
+    "METER": "mètre",
+    "CARTON": "carton",
+    "OTHER": "autre"
+  },
+  "movementType": {
+    "PRODUCTION": "Production",
+    "PURCHASE": "Achat",
+    "CUSTOMER_RETURN": "Retour client",
+    "SALE": "Vente",
+    "LOSS": "Perte",
+    "INTERNAL_USE": "Utilisation interne",
+    "SUPPLIER_RETURN": "Retour fournisseur",
+    "ADJUSTMENT": "Ajustement d’inventaire"
+  },
+  "products": {
+    "title": "Produits",
+    "add": "+ Ajouter un produit",
+    "edit": "Modifier",
+    "searchPlaceholder": "Rechercher par nom ou référence…",
+    "allCategories": "Toutes les catégories",
+    "allStatuses": "Tous",
+    "activeOnly": "Actifs",
+    "inactiveOnly": "Inactifs",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucun produit ne correspond à votre recherche.",
+    "count": "{count} produit(s)",
+    "inactive": "Inactif",
+    "skuHint": "Laissez vide pour un code automatique.",
+    "shelfHint": "Durée de conservation après production.",
+    "noBatches": "Aucun lot pour ce produit.",
+    "noMovements": "Aucun mouvement de stock.",
+    "empty": {
+      "title": "Vous n’avez encore aucun produit.",
+      "text": "Créez votre catalogue : prix, TVA et seuils de stock. Vos productions et ventes s’y rattacheront.",
+      "cta": "+ Ajouter le premier produit"
+    },
+    "cols": {
+      "product": "Produit",
+      "category": "Catégorie",
+      "price": "Prix de détail",
+      "stock": "Stock"
+    },
+    "stockState": {
+      "ok": "En stock",
+      "low": "Stock faible",
+      "out": "Épuisé"
+    },
+    "sections": {
+      "identity": "Identification",
+      "prices": "Prix",
+      "stock": "Stock",
+      "batches": "Derniers lots",
+      "movements": "Derniers mouvements"
+    },
+    "fields": {
+      "name": "Nom du produit",
+      "nameAr": "Nom en arabe",
+      "sku": "Référence (SKU)",
+      "category": "Catégorie",
+      "description": "Description",
+      "unit": "Unité",
+      "purchasePrice": "Prix d’achat / revient (MAD)",
+      "priceRetail": "Prix de détail (MAD)",
+      "priceProfessional": "Prix professionnel (MAD)",
+      "priceReseller": "Prix revendeur (MAD)",
+      "priceMember": "Prix membre (MAD)",
+      "vatRate": "TVA",
+      "stockMin": "Stock minimum",
+      "stockMax": "Stock maximum",
+      "shelfLifeDays": "Conservation (jours)",
+      "isActive": "Produit actif (vendable)",
+      "margin": "Marge",
+      "currentStock": "Stock actuel",
+      "reserved": "Réservé",
+      "available": "Disponible"
+    },
+    "archive": {
+      "label": "Archiver",
+      "title": "Archiver ce produit ?",
+      "message": "Le produit n’apparaîtra plus dans le catalogue, mais son historique de stock et de ventes est conservé.",
+      "confirm": "Oui, archiver"
+    },
+    "produce": "Enregistrer une production"
+  },
+  "batchStatus": {
+    "IN_PRODUCTION": "En production",
+    "AVAILABLE": "Disponible",
+    "PARTIALLY_SOLD": "Partiellement vendu",
+    "SOLD_OUT": "Épuisé",
+    "EXPIRED": "Expiré"
+  },
+  "production": {
+    "title": "Production",
+    "add": "+ Ajouter une production",
+    "save": "Enregistrer la production",
+    "searchPlaceholder": "Rechercher par produit ou n° de lot…",
+    "allProducts": "Tous les produits",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucune production ne correspond à votre recherche.",
+    "count": "{count} production(s)",
+    "empty": {
+      "title": "Aucune production enregistrée.",
+      "text": "Chaque production crée un lot, ajoute les quantités au stock et garde la trace du producteur.",
+      "cta": "+ Ajouter la première production"
+    },
+    "cols": {
+      "date": "Date",
+      "product": "Produit",
+      "quantity": "Quantité",
+      "producer": "Producteur",
+      "batch": "Lot"
+    },
+    "sections": {
+      "what": "Production",
+      "who": "Producteur",
+      "batch": "Lot et coût",
+      "trace": "Traçabilité du lot : production → stock → ventes"
+    },
+    "fields": {
+      "productId": "Produit",
+      "quantity": "Quantité produite",
+      "producedAt": "Date de production",
+      "quality": "Qualité",
+      "memberId": "Membre producteur",
+      "groupName": "Groupe",
+      "plotOrUnit": "Parcelle / unité de production",
+      "batchNumber": "N° de lot",
+      "expiresAt": "Date d’expiration",
+      "unitCost": "Prix de revient par unité (MAD)",
+      "comment": "Commentaire",
+      "remaining": "Restant",
+      "status": "Statut du lot"
+    },
+    "hints": {
+      "batch": "Laissez vide pour un numéro automatique.",
+      "expiry": "Calculée selon la durée de conservation du produit si vide.",
+      "cost": "Sert au calcul de la marge."
+    }
+  },
+  "stock": {
+    "title": "Stocks",
+    "tabs": {
+      "overview": "Vue d’ensemble",
+      "movements": "Mouvements",
+      "inventories": "Inventaires"
+    },
+    "kpi": {
+      "value": "Valeur estimée du stock",
+      "products": "Produits suivis",
+      "low": "Stock faible",
+      "out": "Produits épuisés"
+    },
+    "expiring": "Lots expirés ou proches de l’expiration (30 jours)",
+    "expired": "Expiré le",
+    "expiresOn": "Expire le",
+    "search": "Rechercher un produit…",
+    "filterState": "État",
+    "allStates": "Tous les états",
+    "reset": "Réinitialiser les filtres",
+    "none": "Aucun produit à afficher.",
+    "cols": {
+      "product": "Produit",
+      "current": "Stock actuel",
+      "reserved": "Réservé",
+      "available": "Disponible",
+      "minmax": "Min / Max",
+      "value": "Valeur",
+      "state": "État"
+    },
+    "newMovement": "+ Ajouter un mouvement",
+    "allProducts": "Tous les produits",
+    "allTypes": "Tous les types",
+    "noMovements": "Aucun mouvement de stock.",
+    "count": "{count} mouvement(s)",
+    "autoBatch": "Automatique (du plus ancien au plus récent)",
+    "hints": {
+      "batch": "Laissez automatique pour consommer les lots les plus anciens d’abord."
+    },
+    "fields": {
+      "type": "Type de mouvement",
+      "productId": "Produit",
+      "quantity": "Quantité",
+      "movedAt": "Date",
+      "batchId": "Lot",
+      "reference": "Référence",
+      "comment": "Commentaire"
+    },
+    "inv": {
+      "start": "+ Nouvel inventaire",
+      "startFirst": "+ Démarrer le premier inventaire",
+      "emptyTitle": "Aucun inventaire réalisé.",
+      "emptyText": "Comptez votre stock réel : CoopFlow calcule les écarts et corrige le stock après votre validation.",
+      "lines": "{count} produit(s)",
+      "status": {
+        "DRAFT": "Brouillon",
+        "IN_PROGRESS": "En cours",
+        "VALIDATED": "Validé",
+        "CANCELLED": "Annulé"
+      },
+      "cols": {
+        "product": "Produit",
+        "theoretical": "Stock théorique",
+        "actual": "Stock réel",
+        "diff": "Écart",
+        "diffValue": "Valeur de l’écart"
+      },
+      "totalDiff": "Valeur totale des écarts",
+      "save": "Enregistrer les quantités",
+      "saveFirst": "Saisissez les quantités comptées puis cliquez sur « Enregistrer les quantités » avant de valider. Les produits laissés vides ne seront pas modifiés.",
+      "validate": "Valider l’inventaire",
+      "validateTitle": "Valider cet inventaire ?",
+      "validateMessage": "{counted} produit(s) sur {total} ont été comptés. Le stock sera corrigé selon les écarts et cette action est définitive.",
+      "validateConfirm": "Oui, valider"
+    }
+  },
+  "customers": {
+    "title": "Clients",
+    "add": "+ Ajouter un client",
+    "edit": "Modifier",
+    "export": "Exporter",
+    "search": "Rechercher par nom, entreprise, ville…",
+    "allTypes": "Tous les types",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucun client ne correspond à votre recherche.",
+    "count": "{count} client(s)",
+    "empty": {
+      "title": "Vous n’avez encore aucun client.",
+      "text": "Ajoutez vos clients pour suivre leurs commandes, leurs factures et ce qu’ils vous doivent.",
+      "cta": "+ Ajouter le premier client"
+    },
+    "cols": {
+      "customer": "Client",
+      "type": "Type",
+      "phone": "Téléphone",
+      "city": "Ville",
+      "balance": "Solde dû"
+    },
+    "types": {
+      "INDIVIDUAL": "Particulier",
+      "COMPANY": "Entreprise",
+      "RESELLER": "Revendeur",
+      "RESTAURANT": "Restaurant",
+      "HOTEL": "Hôtel",
+      "EXPORTER": "Exportateur",
+      "WHOLESALER": "Grossiste"
+    },
+    "tiers": {
+      "RETAIL": "Prix de détail",
+      "PROFESSIONAL": "Prix professionnel",
+      "RESELLER": "Prix revendeur",
+      "MEMBER": "Prix membre"
+    },
+    "autoTier": "Automatique (selon le type)",
+    "fields": {
+      "name": "Nom",
+      "company": "Entreprise",
+      "type": "Type de client",
+      "priceTier": "Niveau de prix",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "address": "Adresse",
+      "city": "Ville",
+      "ice": "ICE",
+      "notes": "Notes"
+    },
+    "sections": {
+      "info": "Coordonnées",
+      "balance": "Solde dû",
+      "orders": "Dernières commandes",
+      "invoices": "Dernières factures",
+      "payments": "Derniers paiements"
+    },
+    "balanceHint": "Total des factures émises non encore payées.",
+    "paid": "payé",
+    "noData": "Rien pour le moment.",
+    "whatsapp": "Envoyer WhatsApp",
+    "waText": "Bonjour {name},",
+    "archive": {
+      "label": "Archiver",
+      "title": "Archiver ce client ?",
+      "message": "Le client n’apparaîtra plus dans la liste, mais ses commandes, factures et paiements sont conservés.",
+      "confirm": "Oui, archiver"
+    }
+  },
+  "paymentMethod": {
+    "CASH": "Espèces",
+    "BANK_TRANSFER": "Virement bancaire",
+    "CHEQUE": "Chèque",
+    "CARD": "Carte",
+    "OTHER": "Autre"
+  },
+  "paymentState": {
+    "UNPAID": "Impayé",
+    "PARTIAL": "Partiel",
+    "PAID": "Payé"
+  },
+  "expenseCategory": {
+    "RAW_MATERIALS": "Matières premières",
+    "TRANSPORT": "Transport",
+    "PACKAGING": "Emballage",
+    "SALARIES": "Salaires",
+    "ELECTRICITY": "Électricité",
+    "WATER": "Eau",
+    "MARKETING": "Marketing",
+    "MAINTENANCE": "Maintenance",
+    "ADMINISTRATION": "Administration",
+    "SUPPLIES": "Fournitures",
+    "OTHER": "Autres"
+  },
+  "docs": {
+    "customer": "Client",
+    "notes": "Notes",
+    "lines": "Produits",
+    "product": "Produit",
+    "available": "dispo",
+    "qty": "Quantité",
+    "price": "Prix unitaire HT",
+    "discount": "Remise (MAD)",
+    "remove": "Supprimer la ligne",
+    "addLine": "Ajouter une ligne",
+    "overStock": "Quantité supérieure au stock disponible.",
+    "subtotal": "Sous-total HT",
+    "discountTotal": "Remises",
+    "vat": "TVA",
+    "total": "Total TTC",
+    "payNow": "Encaissement immédiat (facultatif)",
+    "payAmount": "Montant encaissé (MAD)",
+    "payAll": "Tout encaisser",
+    "saveDraft": "Enregistrer en brouillon",
+    "createOrder": "Créer la commande",
+    "createSale": "Valider la vente et facturer"
+  },
+  "orders": {
+    "title": "Commandes",
+    "add": "+ Nouvelle commande",
+    "search": "Rechercher par n° ou client…",
+    "status": "Statut",
+    "allStatuses": "Tous les statuts",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucune commande ne correspond à votre recherche.",
+    "count": "{count} commande(s)",
+    "empty": {
+      "title": "Aucune commande pour le moment.",
+      "text": "Créez une commande : le stock est réservé à la confirmation, puis la livraison crée la vente et la facture.",
+      "cta": "+ Créer la première commande"
+    },
+    "cols": {
+      "number": "N°",
+      "customer": "Client",
+      "date": "Date",
+      "status": "Statut",
+      "payment": "Paiement",
+      "total": "Total",
+      "product": "Produit",
+      "qty": "Qté",
+      "price": "Prix HT",
+      "vat": "TVA"
+    },
+    "lines": "Produits commandés",
+    "totals": {
+      "subtotal": "Total HT",
+      "vat": "TVA",
+      "total": "Total TTC"
+    },
+    "invoice": "Facture",
+    "to": {
+      "NEW": "Valider la commande",
+      "CONFIRMED": "Confirmer (réserve le stock)",
+      "PREPARING": "Mettre en préparation",
+      "READY": "Marquer prête",
+      "SHIPPED": "Marquer expédiée",
+      "DELIVERED": "Marquer livrée",
+      "CANCELLED": "Annuler la commande"
+    },
+    "deliverTitle": "Marquer la commande livrée ?",
+    "deliverMessage": "Le stock sera sorti, puis la vente et la facture seront créées automatiquement. Cette action est définitive.",
+    "deliverConfirm": "Oui, livrer",
+    "cancelTitle": "Annuler cette commande ?",
+    "cancelMessage": "Le stock réservé sera libéré. Cette action est définitive.",
+    "cancelConfirm": "Oui, annuler",
+    "sendConfirmation": "Envoyer la confirmation par e-mail",
+    "emailSent": "La confirmation a été envoyée au client.",
+    "sendWhatsapp": "Notifier par WhatsApp",
+    "waSent": "Le message WhatsApp a été envoyé au client."
+  },
+  "sales": {
+    "title": "Ventes",
+    "add": "+ Nouvelle vente",
+    "hint": "Vente directe (comptoir) : le stock est sorti et la facture créée immédiatement.",
+    "search": "Rechercher par n° ou client…",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucune vente ne correspond à votre recherche.",
+    "count": "{count} vente(s)",
+    "empty": {
+      "title": "Aucune vente pour le moment.",
+      "text": "Les ventes viennent des commandes livrées ou d’une vente directe. Chacune génère sa facture.",
+      "cta": "+ Créer la première vente"
+    },
+    "cols": {
+      "number": "N°",
+      "customer": "Client",
+      "date": "Date",
+      "payment": "Paiement",
+      "total": "Total"
+    }
+  },
+  "invoices": {
+    "title": "Factures",
+    "hint": "Les factures sont créées automatiquement par les ventes et les livraisons.",
+    "search": "Rechercher par n° ou client…",
+    "allStatuses": "Tous les statuts",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucune facture ne correspond à votre recherche.",
+    "count": "{count} facture(s)",
+    "status": {
+      "DRAFT": "Brouillon",
+      "ISSUED": "Émise",
+      "PARTIALLY_PAID": "Partiellement payée",
+      "PAID": "Payée",
+      "OVERDUE": "En retard",
+      "CANCELLED": "Annulée"
+    },
+    "summary": {
+      "billed": "Facturé",
+      "paid": "Encaissé",
+      "remaining": "Reste à encaisser"
+    },
+    "cols": {
+      "number": "N°",
+      "customer": "Client",
+      "date": "Date",
+      "due": "Échéance",
+      "status": "Statut",
+      "total": "Total TTC",
+      "paid": "Payé"
+    },
+    "invoice": "FACTURE",
+    "issueDate": "Date",
+    "dueDate": "Échéance",
+    "billedTo": "Facturé à",
+    "ice": "ICE",
+    "taxId": "IF",
+    "lines": {
+      "product": "Désignation",
+      "qty": "Qté",
+      "price": "P.U. HT",
+      "vat": "TVA",
+      "total": "Total HT"
+    },
+    "subtotal": "Total HT",
+    "vatTotal": "Total TVA",
+    "ttc": "Total TTC",
+    "alreadyPaid": "Déjà payé",
+    "remaining": "Reste à payer",
+    "terms": "Conditions de paiement",
+    "payments": "Paiements reçus",
+    "print": "Imprimer / PDF",
+    "pay": "Enregistrer un paiement",
+    "sendEmail": "Envoyer par e-mail",
+    "sendTitle": "Envoyer la facture ?",
+    "sendMessage": "Un e-mail contenant la facture sera envoyé à {email}.",
+    "sendConfirm": "Oui, envoyer",
+    "noEmail": "Ajouter l’e-mail du client pour envoyer",
+    "sendReminder": "Envoyer une relance",
+    "reminderTitle": "Envoyer une relance ?",
+    "sendReceipt": "Envoyer le reçu",
+    "flash": {
+      "invoice": "Facture envoyée à {email}.",
+      "reminder": "Relance envoyée à {email}.",
+      "receipt": "Reçu envoyé à {email}.",
+      "wa": "Message WhatsApp envoyé."
+    },
+    "remindAll": "Relancer les factures en retard",
+    "remindAllTitle": "Relancer toutes les factures en retard ?",
+    "remindAllMessage": "Un rappel sera envoyé aux clients ayant une facture en retard et une adresse e-mail (sauf s’ils ont déjà été relancés ces 3 derniers jours).",
+    "remindersSent": "{count} relance(s) envoyée(s).",
+    "sendWhatsapp": "Envoyer par WhatsApp",
+    "sendWhatsappReminder": "Relance WhatsApp",
+    "waTitle": "Envoyer un message WhatsApp ?",
+    "waMessage": "Un message WhatsApp sera envoyé au {phone}."
+  },
+  "payments": {
+    "title": "Paiements",
+    "add": "+ Enregistrer un paiement",
+    "search": "Rechercher par client, facture, référence…",
+    "allMethods": "Tous les modes",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucun paiement ne correspond à votre recherche.",
+    "count": "{count} paiement(s)",
+    "totalIn": "Total encaissé",
+    "empty": {
+      "title": "Aucun paiement pour le moment.",
+      "text": "Les paiements s’enregistrent sur les factures : la facture, la vente et la commande se mettent à jour toutes seules."
+    },
+    "cols": {
+      "date": "Date",
+      "from": "De",
+      "invoice": "Facture",
+      "method": "Mode",
+      "amount": "Montant"
+    },
+    "fields": {
+      "invoiceId": "Facture à encaisser",
+      "amount": "Montant (MAD)",
+      "method": "Mode de paiement",
+      "paidAt": "Date",
+      "reference": "Référence (n° de chèque, virement…)",
+      "note": "Note"
+    },
+    "left": "reste",
+    "amountHint": "Ne peut pas dépasser le reste à payer.",
+    "noOpen": "Aucune facture à encaisser."
+  },
+  "expenses": {
+    "title": "Dépenses",
+    "add": "+ Ajouter une dépense",
+    "edit": "Modifier la dépense",
+    "allCategories": "Toutes les catégories",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucune dépense dans cette catégorie.",
+    "count": "{count} dépense(s)",
+    "total": "Total des dépenses",
+    "empty": {
+      "title": "Aucune dépense enregistrée.",
+      "text": "Notez vos dépenses (matières, transport, salaires…) pour connaître votre résultat réel.",
+      "cta": "+ Ajouter la première dépense"
+    },
+    "cols": {
+      "date": "Date",
+      "category": "Catégorie",
+      "supplier": "Fournisseur",
+      "method": "Mode",
+      "amount": "Montant"
+    },
+    "fields": {
+      "category": "Catégorie",
+      "amount": "Montant (MAD)",
+      "spentAt": "Date",
+      "supplierId": "Fournisseur",
+      "method": "Mode de paiement",
+      "note": "Note",
+      "onCredit": "Règlement"
+    },
+    "archive": {
+      "label": "Supprimer",
+      "title": "Supprimer cette dépense ?",
+      "message": "La dépense sera retirée des listes et des rapports. L’opération reste tracée dans le journal d’audit.",
+      "confirm": "Oui, supprimer"
+    },
+    "credit": "À crédit",
+    "creditHint": "Une dépense à crédit exige un fournisseur : elle alimente la dette à lui rembourser.",
+    "paid": {
+      "cash": "Payé comptant",
+      "credit": "À crédit (dette fournisseur)"
+    }
+  },
+  "reports": {
+    "title": "Rapports",
+    "print": "Imprimer / PDF",
+    "periodLabel": "Période",
+    "from": "Du",
+    "to": "Au",
+    "apply": "Afficher",
+    "export": "Exporter (CSV)",
+    "periods": {
+      "month": "Ce mois",
+      "quarter": "Ce trimestre",
+      "year": "Cette année",
+      "custom": "Personnalisée"
+    },
+    "exports": {
+      "sales": "Ventes",
+      "payments": "Paiements",
+      "expenses": "Dépenses"
+    },
+    "sections": {
+      "sales": "Ventes",
+      "finance": "Finances",
+      "production": "Production",
+      "stock": "Stock",
+      "members": "Membres et cotisations"
+    },
+    "kpi": {
+      "ht": "Chiffre d’affaires HT",
+      "vat": "TVA collectée",
+      "ttc": "Chiffre d’affaires TTC",
+      "count": "Nombre de ventes",
+      "basket": "Panier moyen",
+      "income": "Encaissements",
+      "expenses": "Dépenses",
+      "result": "Résultat (encaissements − dépenses)",
+      "receivables": "Créances à ce jour",
+      "stockValue": "Valeur du stock",
+      "low": "Produits en stock faible",
+      "out": "Produits épuisés",
+      "newMembers": "Nouveaux membres",
+      "due": "Cotisations attendues",
+      "paid": "Cotisations payées",
+      "contributions": "Cotisations encaissées",
+      "payables": "Dettes fournisseurs à ce jour"
+    },
+    "topProducts": "Produits les plus vendus",
+    "topCustomers": "Meilleurs clients",
+    "expensesByCategory": "Dépenses par catégorie",
+    "produced": "Production par produit",
+    "none": "Aucune donnée sur cette période."
+  },
+  "coopType": {
+    "AGRICOLE": "Agricole",
+    "ARTISANALE": "Artisanale",
+    "FEMININE": "Féminine",
+    "ALIMENTAIRE": "Alimentaire",
+    "TERROIR": "Produits du terroir",
+    "PRODUCTION": "De production",
+    "TRANSFORMATION": "De transformation",
+    "SERVICES": "De services"
+  },
+  "sector": {
+    "AGRICULTURE": "Agriculture",
+    "ARTISANAT": "Artisanat",
+    "AGROALIMENTAIRE": "Agroalimentaire",
+    "TERROIR": "Produits du terroir",
+    "COSMETIQUE": "Cosmétique",
+    "TEXTILE": "Textile",
+    "SERVICES": "Services",
+    "AUTRE": "Autre"
+  },
+  "onboarding": {
+    "title": "Présentez votre coopérative",
+    "intro": "Ces informations figureront sur vos factures. Vous pourrez les modifier plus tard.",
+    "later": "Plus tard",
+    "banner": "Complétez les informations de votre coopérative : elles figureront sur vos factures.",
+    "fields": {
+      "type": "Type de coopérative",
+      "sector": "Secteur",
+      "foundedAt": "Date de création",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "city": "Ville",
+      "region": "Région",
+      "ice": "ICE (15 chiffres)",
+      "taxId": "Identifiant fiscal (IF)",
+      "registrationNumber": "N° d’enregistrement",
+      "description": "Description"
+    }
+  },
+  "contributionType": {
+    "SHARE": "Part sociale",
+    "MEMBERSHIP": "Cotisation",
+    "CONTRIBUTION": "Contribution",
+    "OTHER": "Autre"
+  },
+  "contributions": {
+    "title": "Cotisations",
+    "add": "+ Ajouter une cotisation",
+    "search": "Rechercher un membre…",
+    "allStatuses": "Tous les statuts",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucune cotisation ne correspond à votre recherche.",
+    "kpi": {
+      "due": "Total attendu",
+      "paid": "Total payé",
+      "remaining": "Reste à payer",
+      "late": "En retard"
+    },
+    "status": {
+      "PAID": "Payée",
+      "LATE": "En retard",
+      "PENDING": "À venir"
+    },
+    "cols": {
+      "member": "Membre",
+      "type": "Type",
+      "due": "Échéance",
+      "amount": "Montant",
+      "paid": "Payé",
+      "status": "Statut"
+    },
+    "fields": {
+      "amountDue": "Montant dû (MAD)",
+      "dueDate": "Échéance",
+      "note": "Note",
+      "payAmount": "Montant encaissé (MAD)",
+      "method": "Mode de paiement",
+      "paidAt": "Date",
+      "reference": "Référence"
+    },
+    "payments": "Paiements reçus",
+    "noPayments": "Aucun paiement pour le moment.",
+    "record": "Enregistrer un paiement",
+    "amountHint": "Ne peut pas dépasser le reste à payer.",
+    "empty": {
+      "title": "Aucune cotisation enregistrée.",
+      "text": "Suivez les parts sociales et les cotisations de vos membres : CoopFlow signale celles qui sont en retard.",
+      "cta": "+ Ajouter la première cotisation"
+    }
+  },
+  "suppliers": {
+    "title": "Fournisseurs",
+    "add": "+ Ajouter un fournisseur",
+    "edit": "Modifier",
+    "search": "Rechercher un fournisseur…",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucun fournisseur ne correspond à votre recherche.",
+    "count": "{count} fournisseur(s)",
+    "empty": {
+      "title": "Aucun fournisseur pour le moment.",
+      "text": "Enregistrez vos fournisseurs pour les associer à vos produits et à vos dépenses.",
+      "cta": "+ Ajouter le premier fournisseur"
+    },
+    "fields": {
+      "name": "Nom",
+      "company": "Entreprise",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "ice": "ICE (15 chiffres)",
+      "taxId": "Identifiant fiscal (IF)",
+      "address": "Adresse",
+      "notes": "Notes"
+    },
+    "spent": "Total des dépenses",
+    "products": "Produits fournis",
+    "purchases": "Historique des achats",
+    "noPurchases": "Aucune dépense liée à ce fournisseur.",
+    "archive": {
+      "label": "Archiver",
+      "title": "Archiver ce fournisseur ?",
+      "message": "Il n’apparaîtra plus dans les listes, mais l’historique de ses achats est conservé.",
+      "confirm": "Oui, archiver"
+    },
+    "cols": {
+      "debt": "Dette"
+    },
+    "debt": "Dette envers ce fournisseur",
+    "debtHint": "Achats à crédit moins paiements effectués.",
+    "pay": "Enregistrer un paiement au fournisseur",
+    "payHint": "Ne peut pas dépasser la dette.",
+    "payments": "Paiements effectués",
+    "noPayments": "Aucun paiement pour le moment.",
+    "onCredit": "à crédit",
+    "payFields": {
+      "amount": "Montant payé (MAD)",
+      "method": "Mode de paiement",
+      "paidAt": "Date",
+      "reference": "Référence"
+    }
+  },
+  "settings": {
+    "title": "Paramètres",
+    "tabs": {
+      "general": "Coopérative",
+      "billing": "Facturation",
+      "users": "Utilisateurs",
+      "activity": "Journal d’activité",
+      "subscription": "Abonnement",
+      "email": "E-mails",
+      "whatsapp": "WhatsApp",
+      "contact": "Contact"
+    },
+    "orgName": "Nom de la coopérative",
+    "billing": {
+      "invoicePrefix": "Préfixe des factures",
+      "orderPrefix": "Préfixe des commandes",
+      "vat": "TVA par défaut",
+      "prefixHint": "Ex. : FAC donne FAC-2026-001.",
+      "note": "Un changement de préfixe ne modifie pas les documents déjà émis : il s’applique aux prochains numéros."
+    },
+    "users": {
+      "count": "{used} utilisateur(s) sur {max} autorisés par votre plan.",
+      "you": "vous",
+      "status": {
+        "ACTIVE": "Actif",
+        "INVITED": "Invité",
+        "DISABLED": "Désactivé"
+      },
+      "role": "Rôle",
+      "disable": "Désactiver",
+      "enable": "Réactiver",
+      "invite": "Inviter un collaborateur",
+      "limit": "Vous avez atteint la limite d’utilisateurs de votre plan.",
+      "send": "Envoyer l’invitation",
+      "fullName": "Nom complet",
+      "email": "Adresse e-mail"
+    },
+    "activity": {
+      "count": "{count} action(s) enregistrée(s)",
+      "none": "Aucune activité enregistrée."
+    },
+    "sub": {
+      "none": "Aucun abonnement.",
+      "plan": "Plan actuel",
+      "month": "mois",
+      "year": "an",
+      "trialEnds": "fin de l’essai le {date}",
+      "trialRemaining": "{days} jour(s) restant(s)",
+      "users": "Utilisateurs",
+      "members": "Membres",
+      "contact": "Pour changer de plan, effectuer un virement CIH ou pour toute question, notre équipe est à votre écoute.",
+      "plansTitle": "Plans d'abonnement pour les coopératives",
+      "plansSubtitle": "Choisissez la formule adaptée à la taille et aux besoins de votre coopérative. Mise à niveau immédiate.",
+      "currentBadge": "Plan actuel",
+      "upgradeBadge": "Mettre à niveau (Upgrade)",
+      "activateBadge": "Choisir ce plan",
+      "lowerBadge": "Plan inférieur",
+      "perMonth": "MAD / mois",
+      "orPerYear": "ou {price} MAD / an",
+      "unlimited": "illimité",
+      "expiredAlert": "Votre période d'essai ou votre abonnement a expiré. L'application est actuellement verrouillée en mode lecture seule. Choisissez un plan ci-dessous ou effectuez votre versement bancaire CIH pour déverrouiller toutes les fonctionnalités.",
+      "bankTitle": "Règlement par virement bancaire — CIH Bank",
+      "bankDesc": "Effectuez votre versement directement sur notre compte bancaire CIH pour une activation instantanée.",
+      "bankName": "CIH Bank (Crédit Immobilier et Hôtelier)",
+      "bankRib": "RIB : 230 780 0001234567890123 45",
+      "bankPhone": "Téléphone & WhatsApp : +212 6 71 75 21 51",
+      "bankEmail": "E-mail : gz.app.media@gmail.com",
+      "goToContact": "Coordonnées bancaires & Formulaire de contact"
+    },
+    "email": {
+      "title": "E-mails",
+      "status": {
+        "on": "L’envoi d’e-mails est activé.",
+        "off": "L’envoi d’e-mails n’est pas configuré."
+      },
+      "offHelp": "Ajoutez RESEND_API_KEY et EMAIL_FROM dans les variables d’environnement du serveur (compte Resend et domaine d’expédition vérifié).",
+      "testButton": "Envoyer un e-mail de test",
+      "testTitle": "Envoyer un e-mail de test ?",
+      "testMessage": "Un message de test sera envoyé à {email}.",
+      "testConfirm": "Oui, envoyer",
+      "testOk": "E-mail de test envoyé à {email}.",
+      "auto": {
+        "title": "Envois automatiques",
+        "hint": "Les envois manuels restent toujours possibles depuis les commandes et les factures.",
+        "order": "Confirmation de commande envoyée automatiquement à la confirmation",
+        "reminders": "Relance quotidienne des factures en retard",
+        "on": "Activé",
+        "off": "Désactivé"
+      },
+      "tpl": {
+        "title": "Modèles d’e-mails",
+        "vars": "Variables disponibles :",
+        "custom": "Personnalisé",
+        "default": "Modèle par défaut",
+        "subject": "Objet",
+        "body": "Message",
+        "reset": "Revenir au modèle par défaut",
+        "resetTitle": "Revenir au modèle par défaut ?",
+        "resetMessage": "Votre texte personnalisé sera remplacé par le modèle d’origine.",
+        "resetConfirm": "Oui, rétablir"
+      },
+      "logs": {
+        "title": "Derniers envois",
+        "none": "Aucun e-mail envoyé pour le moment.",
+        "SENT": "Envoyé",
+        "FAILED": "Échec"
+      }
+    },
+    "audit": {
+      "user": "Utilisateur",
+      "action": "Action",
+      "entity": "Objet",
+      "from": "Du",
+      "to": "Au",
+      "allUsers": "Tous les utilisateurs",
+      "allActions": "Toutes les actions",
+      "allEntities": "Tous les objets",
+      "reset": "Réinitialiser",
+      "export": "Exporter (CSV)",
+      "details": "Voir les détails"
+    },
+    "whatsapp": {
+      "intro": "Envoyez des notifications WhatsApp à vos clients (commande confirmée, facture, relance). Module optionnel : il dépend de votre plan et de la configuration de la plateforme.",
+      "platformOn": "Le service WhatsApp est configuré sur la plateforme.",
+      "platformOff": "Le service WhatsApp n’est pas encore configuré sur la plateforme.",
+      "planOn": "Votre plan inclut WhatsApp.",
+      "planOff": "WhatsApp n’est pas inclus dans votre plan.",
+      "enabledOn": "Activé pour votre coopérative.",
+      "enabledOff": "Désactivé pour votre coopérative.",
+      "toggle": "Module WhatsApp",
+      "toggleHint": "Les messages partent du numéro WhatsApp Business de la plateforme, vers le téléphone enregistré du client.",
+      "tplTitle": "Modèles de message",
+      "tplHelp": "WhatsApp impose des modèles pré-approuvés pour écrire à un client le premier. Créez ces 3 modèles dans Meta Business Manager (catégorie Utility), puis indiquez leurs noms dans les variables d’environnement.",
+      "logs": {
+        "title": "Derniers messages",
+        "none": "Aucun message WhatsApp envoyé."
+      }
+    }
+  },
+  "auditAction": {
+    "CREATE": "Création",
+    "UPDATE": "Modification",
+    "DELETE": "Suppression",
+    "LOGIN": "Connexion",
+    "LOGOUT": "Déconnexion",
+    "EXPORT": "Export",
+    "PAYMENT": "Paiement",
+    "STOCK_CHANGE": "Mouvement de stock",
+    "INVOICE_VALIDATED": "Validation de facture"
+  },
+  "subStatus": {
+    "TRIALING": "Période d’essai",
+    "ACTIVE": "Actif",
+    "PAST_DUE": "Paiement en retard",
+    "CANCELLED": "Résilié",
+    "EXPIRED": "Expiré"
+  },
+  "orgStatus": {
+    "ACTIVE": "Active",
+    "SUSPENDED": "Suspendue",
+    "CLOSED": "Fermée"
+  },
+  "documentCategory": {
+    "STATUTES": "Statuts",
+    "MINUTES": "Procès-verbaux",
+    "ADMINISTRATIVE": "Documents administratifs",
+    "CONTRACT": "Contrats",
+    "INVOICE": "Factures",
+    "VOUCHER": "Bons",
+    "CERTIFICATE": "Certificats",
+    "RECEIPT": "Justificatifs",
+    "MEMBER_DOC": "Documents des membres",
+    "FINANCIAL": "Documents financiers"
+  },
+  "documents": {
+    "title": "Documents",
+    "add": "+ Ajouter un document",
+    "upload": "Envoyer le document",
+    "search": "Rechercher un document…",
+    "allCategories": "Toutes les catégories",
+    "reset": "Réinitialiser les filtres",
+    "noResults": "Aucun document ne correspond à votre recherche.",
+    "count": "{count} document(s)",
+    "empty": {
+      "title": "Aucun document pour le moment.",
+      "text": "Centralisez vos statuts, procès-verbaux, contrats et justificatifs au même endroit.",
+      "cta": "+ Ajouter le premier document"
+    },
+    "cols": {
+      "name": "Nom",
+      "category": "Catégorie",
+      "size": "Taille",
+      "expires": "Expiration",
+      "actions": "Actions"
+    },
+    "open": "Ouvrir",
+    "download": "Télécharger",
+    "expired": "Expiré",
+    "expiresIn": "Expire dans {days} j",
+    "delete": {
+      "label": "Supprimer",
+      "title": "Supprimer ce document ?",
+      "message": "Le fichier sera définitivement supprimé du stockage.",
+      "confirm": "Oui, supprimer"
+    },
+    "fields": {
+      "file": "Fichier",
+      "category": "Catégorie",
+      "name": "Nom affiché",
+      "expiresAt": "Date d’expiration"
+    },
+    "fileHint": "PDF, image, Word, Excel ou CSV — 10 Mo maximum.",
+    "nameHint": "Laissez vide pour garder le nom du fichier.",
+    "expiresHint": "Facultatif : une alerte apparaît 30 jours avant."
+  },
+  "admin": {
+    "badge": "Plateforme",
+    "logout": "Se déconnecter",
+    "title": "Espace plateforme",
+    "tabs": {
+      "overview": "Vue d’ensemble",
+      "organizations": "Coopératives",
+      "plans": "Plans",
+      "users": "Utilisateurs"
+    },
+    "kpi": {
+      "orgs": "Coopératives actives / total",
+      "fresh": "Nouvelles (30 jours)",
+      "users": "Utilisateurs",
+      "mrr": "Revenu mensuel récurrent estimé",
+      "members": "Membres (toutes coopératives)",
+      "sales": "Ventes (30 jours)"
+    },
+    "subs": "Abonnements par statut",
+    "byPlan": "Abonnements actifs par plan",
+    "usage": "Utilisation du système",
+    "none": "Aucune donnée.",
+    "search": "Rechercher une coopérative…",
+    "searchUsers": "Rechercher un utilisateur…",
+    "allStatuses": "Tous les statuts",
+    "reset": "Réinitialiser les filtres",
+    "count": "{count} coopérative(s)",
+    "cols": {
+      "name": "Coopérative",
+      "city": "Ville",
+      "plan": "Plan",
+      "subscription": "Abonnement",
+      "users": "Utilisateurs",
+      "status": "Statut",
+      "created": "Créée le"
+    },
+    "stats": {
+      "members": "Membres",
+      "products": "Produits",
+      "customers": "Clients",
+      "sales": "Ventes",
+      "invoices": "Factures"
+    },
+    "subscription": "Abonnement",
+    "periodEnd": "Fin de période / d’essai",
+    "orgUsers": "Utilisateurs de la coopérative",
+    "confirm": "Confirmer",
+    "suspend": {
+      "label": "Suspendre",
+      "title": "Suspendre cette coopérative ?",
+      "message": "Ses utilisateurs ne pourront plus accéder à l’application tant qu’elle ne sera pas réactivée. Aucune donnée n’est supprimée."
+    },
+    "reactivate": {
+      "label": "Réactiver",
+      "title": "Réactiver cette coopérative ?",
+      "message": "Ses utilisateurs retrouveront l’accès à l’application."
+    },
+    "plansHint": "Les changements de prix et de limites s’appliquent immédiatement à l’affichage ; ils ne modifient pas les paiements déjà effectués.",
+    "subscribers": "{count} abonnement(s)",
+    "plan": {
+      "priceMonthly": "Prix mensuel (MAD)",
+      "priceYearly": "Prix annuel (MAD)",
+      "maxUsers": "Utilisateurs maximum",
+      "maxMembers": "Membres maximum",
+      "unlimited": "Laissez vide pour illimité."
+    },
+    "disable": "Désactiver",
+    "enable": "Réactiver"
+  },
+  "suspended": {
+    "title": "Compte suspendu",
+    "text": "L’accès de votre coopérative est temporairement suspendu. Vos données sont conservées. Contactez le support CoopFlow pour le réactiver.",
+    "logout": "Se déconnecter"
+  },
+  "banner": {
+    "trial": "Votre essai gratuit se termine dans {days} jour(s).",
+    "ended": "Votre période d’essai ou votre abonnement est arrivé à terme. L'application est actuellement verrouillée en mode lecture seule (les ajouts, modifications et suppressions sont désactivés). Choisissez un plan ou réglez par virement CIH pour débloquer votre coopérative.",
+    "endedTitle": "Période d'essai terminée — Mode lecture seule activé",
+    "readOnlyBadge": "Mode Lecture Seule",
+    "viewPlans": "Voir les offres",
+    "contactRib": "Paiement RIB CIH & Contact"
+  },
+  "importer": {
+    "title": "Import de données",
+    "intro": "Reprenez vos fichiers Excel ou CSV : vous choisissez les colonnes, CoopFlow vérifie chaque ligne avant d’importer quoi que ce soit.",
+    "what": "Que voulez-vous importer ?",
+    "file": "Fichier (.xlsx ou .csv)",
+    "hint": "1 000 lignes maximum, 5 Mo. La première ligne doit contenir les noms de colonnes.",
+    "template": "Télécharger un modèle",
+    "entities": {
+      "members": "Membres",
+      "products": "Produits",
+      "customers": "Clients",
+      "suppliers": "Fournisseurs",
+      "stock": "Stock initial (produits existants)"
+    },
+    "mapping": "Associez vos colonnes",
+    "ignore": "— ignorer —",
+    "missing": "Colonnes obligatoires à associer : {fields}.",
+    "preview": "Aperçu des 5 premières lignes",
+    "rows": "{count} ligne(s) de données",
+    "verify": "Vérifier le fichier",
+    "valid": "{count} ligne(s) valide(s)",
+    "invalid": "{count} en erreur",
+    "line": "Ligne {line}",
+    "truncated": "Seules les 100 premières erreurs sont affichées.",
+    "skipErrors": "Ignorer les lignes en erreur et importer les autres",
+    "run": "Importer {count} ligne(s)",
+    "done": "{count} ligne(s) importée(s).",
+    "skipped": "{count} ligne(s) ignorée(s).",
+    "openList": "Voir la liste",
+    "again": "Faire un autre import"
+  },
+  "importFields": {
+    "members": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "cin": "CIN",
+      "birthDate": "Date de naissance",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "address": "Adresse",
+      "city": "Ville",
+      "joinedAt": "Date d’adhésion",
+      "groupName": "Groupe",
+      "role": "Fonction",
+      "status": "Statut",
+      "notes": "Notes"
+    },
+    "products": {
+      "name": "Nom du produit",
+      "nameAr": "Nom en arabe",
+      "sku": "Référence (SKU)",
+      "category": "Catégorie",
+      "unit": "Unité",
+      "purchasePrice": "Prix d’achat",
+      "priceRetail": "Prix de détail",
+      "priceProfessional": "Prix professionnel",
+      "priceReseller": "Prix revendeur",
+      "priceMember": "Prix membre",
+      "vatRate": "TVA",
+      "stockMin": "Stock minimum",
+      "stockMax": "Stock maximum",
+      "shelfLifeDays": "Conservation (jours)",
+      "description": "Description"
+    },
+    "customers": {
+      "name": "Nom",
+      "company": "Entreprise",
+      "type": "Type",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "address": "Adresse",
+      "city": "Ville",
+      "ice": "ICE",
+      "notes": "Notes"
+    },
+    "suppliers": {
+      "name": "Nom",
+      "company": "Entreprise",
+      "phone": "Téléphone",
+      "email": "E-mail",
+      "ice": "ICE",
+      "taxId": "Identifiant fiscal (IF)",
+      "address": "Adresse",
+      "notes": "Notes"
+    },
+    "stock": {
+      "sku": "Référence (SKU) du produit",
+      "quantity": "Quantité en stock"
+    }
+  },
+  "emailKind": {
+    "INVOICE": "Envoi de facture",
+    "RECEIPT": "Reçu de paiement",
+    "ORDER_CONFIRMATION": "Confirmation de commande",
+    "REMINDER": "Relance de facture",
+    "TEST": "E-mail de test"
+  },
+  "whatsappKind": {
+    "ORDER": "Commande",
+    "INVOICE": "Facture",
+    "REMINDER": "Relance"
+  },
+  "publicProduct": {
+    "verified": "Produit Certifié de Coopérative Marocaine",
+    "verifiedSubtitle": "Traçabilité & Authenticité garanties par CoopFlow",
+    "traceability": "Traçabilité du Terroir",
+    "batchDetails": "Détails du Lot",
+    "batchNumber": "Numéro de lot",
+    "productionDate": "Date de production",
+    "expirationDate": "Date limite d'utilisation",
+    "origin": "Origine / Terroir",
+    "producer": "Producteur / Groupe",
+    "quality": "Qualité / Spécification",
+    "coopInfo": "À propos de la coopérative",
+    "legalNotice": "Mentions Légales",
+    "contact": "Contacter la coopérative",
+    "call": "Appeler",
+    "whatsapp": "WhatsApp",
+    "email": "E-mail",
+    "website": "Site web",
+    "allBatches": "Tous les lots tracés",
+    "steps": {
+      "title": "Cycle de traçabilité",
+      "harvest": "Récolte & Cueillette locale",
+      "harvestDesc": "Matières premières récoltées par les membres de la coopérative.",
+      "craft": "Transformation artisanale",
+      "craftDesc": "Pressage, séchage ou préparation selon le savoir-faire marocain.",
+      "batching": "Mise en lot & Contrôle",
+      "batchingDesc": "Enregistrement du lot et des dates de traçabilité.",
+      "delivery": "Distribution garantie",
+      "deliveryDesc": "Produit authentique directement issu de la coopérative."
+    },
+    "backHome": "Espace Coopérative",
+    "share": "Partager",
+    "print": "Imprimer la fiche",
+    "copyLink": "Copier le lien",
+    "copied": "Lien copié !"
+  },
+  "contact": {
+    "title": "Contact & Règlement d'abonnement",
+    "subtitle": "Activez votre compte, demandez une mise à niveau ou effectuez votre versement bancaire CIH.",
+    "directSupport": "Support direct & Téléphone",
+    "callNow": "Appeler le +212 6 71 75 21 51",
+    "whatsappChat": "Discuter sur WhatsApp",
+    "whatsappSubtext": "Réponse rapide 7j/7",
+    "directEmail": "E-mail direct",
+    "emailSubtext": "gz.app.media@gmail.com",
+    "hours": "Lundi au Samedi : 09h00 - 18h30 (GMT+1)",
+    "cihTitle": "Coordonnées bancaires CIH Bank pour l'abonnement",
+    "cihSubtitle": "Versez le montant de votre abonnement sur notre compte bancaire CIH :",
+    "bank": "Banque",
+    "bankValue": "CIH Bank (Crédit Immobilier et Hôtelier)",
+    "beneficiary": "Bénéficiaire",
+    "beneficiaryValue": "CoopFlow / GZ APP MEDIA",
+    "rib": "RIB (24 chiffres)",
+    "ribValue": "230 780 0001234567890123 45",
+    "rawRib": "230780000123456789012345",
+    "iban": "IBAN",
+    "ibanValue": "MA64 2307 8000 0123 4567 8901 2345",
+    "swift": "Code SWIFT / BIC",
+    "swiftValue": "CIHBMAMC",
+    "copyRib": "Copier le RIB",
+    "copied": "RIB copié dans le presse-papiers !",
+    "instructionsTitle": "Comment valider votre abonnement :",
+    "step1": "1. Effectuez votre virement bancaire du montant de votre plan (Starter: 1 990 DH/an, Pro: 3 990 DH/an, Business: 5 990 DH/an).",
+    "step2": "2. Indiquez impérativement le nom de votre coopérative en libellé/motif du virement.",
+    "step3": "3. Transmettez-nous le reçu par le formulaire ci-dessous ou par WhatsApp au +212 6 71 75 21 51.",
+    "step4": "4. Votre coopérative sera déverrouillée ou mise à niveau immédiatement.",
+    "formTitle": "Formulaire d'activation & contact",
+    "formSubtitle": "Ce message sera directement envoyé à gz.app.media@gmail.com",
+    "fields": {
+      "fullName": "Nom et prénom du responsable",
+      "orgName": "Nom de la coopérative",
+      "email": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "plan": "Plan ou objet de la demande",
+      "message": "Message / Détails du virement ou demande"
+    },
+    "plans": {
+      "STARTER": "Plan Starter (1 990 DH / an)",
+      "PROFESSIONAL": "Plan Professionnel (3 990 DH / an)",
+      "BUSINESS": "Plan Entreprise (5 990 DH / an)",
+      "RENEWAL": "Renouvellement d'abonnement",
+      "SUPPORT": "Assistance & Support technique",
+      "OTHER": "Autre demande"
+    },
+    "submit": "Envoyer le message",
+    "submitting": "Envoi en cours...",
+    "successTitle": "Message envoyé avec succès !",
+    "successDesc": "Votre demande a bien été transmise à gz.app.media@gmail.com. Notre équipe prendra contact avec vous dans les plus brefs délais.",
+    "orEmailClient": "Ou ouvrir directement dans votre messagerie e-mail"
+  }
+}

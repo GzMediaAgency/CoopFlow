@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hors-ligne — CoopFlow</title>
+  <style>
+    :root {
+      --color-forest: #123f38;
+      --color-canopy: #1b5a4b;
+      --color-argan: #f4c45e;
+      --color-field: #fefaef;
+      --color-ink: #17302b;
+      --color-ink-muted: #66706b;
+      --color-line: #ece5d2;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--color-field);
+      color: var(--color-ink);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .card {
+      background: #ffffff;
+      border: 1px solid var(--color-line);
+      border-radius: 1.25rem;
+      padding: 2.5rem 1.75rem;
+      max-width: 440px;
+      width: 100%;
+      box-shadow: 0 4px 20px -4px rgba(18, 63, 56, 0.12);
+    }
+    .icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.25rem;
+      background: var(--color-forest);
+      border-radius: 1rem;
+      display: grid;
+      place-items: center;
+      color: var(--color-argan);
+    }
+    h1 {
+      font-size: 1.5rem;
+      color: var(--color-forest);
+      margin-bottom: 0.5rem;
+    }
+    .subtitle-ar {
+      font-size: 1.25rem;
+      color: #a67c26;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      direction: rtl;
+    }
+    p {
+      font-size: 0.875rem;
+      color: var(--color-ink-muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .p-ar {
+      direction: rtl;
+      font-size: 0.875rem;
+      margin-bottom: 1.75rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--color-canopy);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.75rem;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s ease;
+      width: 100%;
+    }
+    .btn:hover { background: #123f38; }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #b3652a;
+      background: rgba(179, 101, 42, 0.1);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="1" y1="1" x2="23" y2="23"></line>
+        <path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"></path>
+        <path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"></path>
+        <path d="M10.71 5.05A16 16 0 0 1 22.58 9"></path>
+        <path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"></path>
+        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+        <line x1="12" y1="20" x2="12.01" y2="20"></line>
+      </svg>
+    </div>
+
+    <span class="badge">Mode hors-ligne / غير متصل</span>
+
+    <h1>Connexion interrompue</h1>
+    <div class="subtitle-ar">لا يوجد اتصال بالإنترنت</div>
+
+    <p>
+      CoopFlow a détecté une perte de réseau. Dès que votre connexion sera rétablie, l'application se synchronisera automatiquement.
+    </p>
+
+    <p class="p-ar">
+      تعذر الاتصال بالخادم. ستتم إعادة المزامنة تلقائيا فور استرجاع شبكة الإنترنت.
+    </p>
+
+    <button class="btn" onclick="window.location.reload()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+      </svg>
+      Réessayer la connexion / إعادة المحاولة
+    </button>
+  </div>
+</body>
+</html>
+

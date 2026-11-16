@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  /* Palette extraite du guide « ALAMIBUSINESS » : vert forêt, or, crème, olive */
+  --color-forest: #123f38;        /* vert forêt profond : barre latérale, titres */
+  --color-forest-2: #27473a;
+  --color-olive: #545631;         /* fin du dégradé (coin chaud) */
+  --color-canopy: #1b5a4b;        /* actions, liens, état actif */
+  --color-canopy-soft: #e4efe9;
+  --color-argan: #f4c45e;         /* or : accents, pastilles, repères sur fond sombre */
+  --color-gold-deep: #a67c26;     /* or foncé : texte et icônes sur fond clair */
+  --color-argan-soft: #fdf1d3;
+  --color-sky: #2f7a80;
+  --color-clay: #b3652a;
+  --color-field: #fefaef;         /* crème : fond d'application */
+  --color-ink: #17302b;
+  --color-ink-muted: #66706b;
+  --color-line: #ece5d2;
+  --color-danger: #b23a2e;
+  --font-sans: "Figtree", "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+  --font-display: "Bricolage Grotesque", "IBM Plex Sans Arabic", system-ui, -apple-system, sans-serif;
+}
+html { color: var(--color-ink); background: var(--color-field); }
+body { background: radial-gradient(900px 380px at 100% -8%, #f8e9bd 0, transparent 62%), var(--color-field); }
+h1, h2 { color: var(--color-forest); font-family: var(--font-display); letter-spacing: -0.01em; }
+.font-display { font-family: var(--font-display); letter-spacing: -0.01em; }
+.card { background: #fff; border: 1px solid var(--color-line); border-radius: 1rem;
+  box-shadow: 0 1px 2px rgb(18 63 56 / .04), 0 10px 28px -14px rgb(84 86 49 / .22); }
+:focus-visible { outline: 2px solid var(--color-argan); outline-offset: 2px; }
+
+/* Impression / PDF : seul le document (facture, rapport) est imprimé */
+@media print {
+  aside, header, nav, dialog { display: none !important; }
+  [data-shell] { display: block !important; }
+  body { background: #fff !important; }
+  main { padding: 0 !important; }
+  .card { box-shadow: none !important; }
+}

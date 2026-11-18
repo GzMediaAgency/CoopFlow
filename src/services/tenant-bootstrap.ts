@@ -3,13 +3,22 @@ import { prisma } from "@/lib/db/tenant";
 import { DEFAULT_PERMISSIONS, MODULES } from "@/lib/auth/permissions";
 
 const ROLE_NAMES: Partial<Record<SystemRole, string>> = { ADMIN: "Administrateur", PRESIDENT: "Président / Directeur", MANAGER: "Responsable", ACCOUNTANT: "Comptable", STOCK_MANAGER: "Responsable stock", AGENT: "Agent" };
-const PLANS = [["STARTER", "Starter", 149, 3, 50], ["PROFESSIONAL", "Professional", 299, 10, 300], ["BUSINESS", "Business", 599, 50, null]] as const;
+const PLANS = [
+  { code: "STARTER", name: "Starter", monthly: Math.round(1990 / 12), yearly: 1990, users: 3, members: 50 },
+  { code: "PROFESSIONAL", name: "Professional", monthly: Math.round(3990 / 12), yearly: 3990, users: 10, members: 300 },
+  { code: "BUSINESS", name: "Business", monthly: Math.round(5990 / 12), yearly: 5990, users: 50, members: null },
+] as const;
 
 /** Données de plateforme indispensables (permissions, plans) : créées si absentes, donc l'inscription marche sur une base vierge. */
 async function ensurePlatformData() {
   await prisma.permission.createMany({ data: MODULES.flatMap((m) => ["read", "write", "delete", "validate", "export"].map((a) => ({ code: `${m}:${a}`, module: m }))), skipDuplicates: true });
-  for (const [code, name, price, users, members] of PLANS)
-    await prisma.subscriptionPlan.upsert({ where: { code }, update: {}, create: { code, name, priceMonthly: price, maxUsers: users, maxMembers: members, features: { whatsapp: code !== "STARTER", automations: code === "BUSINESS" } } });
+  for (const p of PLANS) {
+    await prisma.subscriptionPlan.upsert({
+      where: { code: p.code },
+      update: { priceMonthly: p.monthly, priceYearly: p.yearly },
+      create: { code: p.code, name: p.name, priceMonthly: p.monthly, priceYearly: p.yearly, maxUsers: p.users, maxMembers: p.members, features: { whatsapp: p.code !== "STARTER", automations: p.code === "BUSINESS" } },
+    });
+  }
 }
 
 const slugify = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "cooperative";

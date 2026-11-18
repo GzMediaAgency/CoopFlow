@@ -4,7 +4,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { routing } from "@/i18n/routing";
 
 const intl = createIntlMiddleware(routing);
-const PUBLIC = ["/login", "/register", "/forgot-password", "/reset-password", "/p/"];
+const PUBLIC = ["/login", "/register", "/forgot-password", "/reset-password", "/p/", "/terms", "/privacy"];
 
 export default async function middleware(req: NextRequest) {
   const res = intl(req);

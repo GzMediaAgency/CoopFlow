@@ -68,7 +68,7 @@
     "noAccount": "إنشاء تعاونيتي",
     "register": "إنشاء حسابي",
     "registerTitle": "أنشئوا تعاونيتكم على CoopFlow",
-    "registerIntro": "14 يوما تجريبية، دون بطاقة بنكية.",
+    "registerIntro": "30 يوماً تجريبية، دون بطاقة بنكية.",
     "orgName": "اسم التعاونية",
     "fullName": "اسمكم الكامل",
     "confirmPassword": "تأكيد كلمة المرور",
@@ -1259,7 +1259,8 @@
       "subscription": "الاشتراك",
       "users": "المستخدمون",
       "status": "الحالة",
-      "created": "تاريخ الإنشاء"
+      "created": "تاريخ الإنشاء",
+      "actions": "إجراءات"
     },
     "stats": {
       "members": "الأعضاء",
@@ -1292,7 +1293,22 @@
       "unlimited": "اتركوه فارغا لعدد غير محدود."
     },
     "disable": "تعطيل",
-    "enable": "إعادة تفعيل"
+    "enable": "إعادة تفعيل",
+    "extendTrial": "+30 يوم تجربة",
+    "activate": "تفعيل",
+    "suspendAction": "إيقاف",
+    "close": "تعطيل",
+    "manage": "إدارة",
+    "trialInfo": "فترة التجربة",
+    "trialDaysLeft": "متبقي {days} يوم",
+    "trialExpired": "فترة التجربة منتهية",
+    "extend30": "+ 30 يوم",
+    "extend15": "+ 15 يوم",
+    "statusSection": "حالة التعاونية",
+    "closeTitle": "تعطيل وإغلاق هذه التعاونية؟",
+    "closeMessage": "سيتم إغلاق حساب التعاونية وتعطيل الولوج.",
+    "activateTitle": "تفعيل هذه التعاونية؟",
+    "activateMessage": "سيتم تفعيل الحساب للولوج العادي."
   },
   "suspended": {
     "title": "الحساب موقوف",

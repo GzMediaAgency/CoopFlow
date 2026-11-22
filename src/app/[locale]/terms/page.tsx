@@ -76,7 +76,7 @@ export default async function TermsPage({ params }: Props) {
                 <span>2.</span> الولوج، التسجيل وفترة التجربة المجانية
               </h2>
               <p className="text-sm leading-relaxed text-ink-muted">
-                يتاح التسجيل لمسؤولي التعاونيات عبر إنشاء حساب رسمي. تستفيد كل تعاونية جديدة من <strong>فترة تجريبية مجانية لمدة 14 يوماً</strong> تشمل كافة ميزات الخطة الاحترافية، دون أي التزام مسبق أو طلب بيانات بنكية.
+                يتاح التسجيل لمسؤولي التعاونيات عبر إنشاء حساب رسمي. تستفيد كل تعاونية جديدة من <strong>فترة تجريبية مجانية لمدة 30 يوماً</strong> تشمل كافة ميزات الخطة الاحترافية، دون أي التزام مسبق أو طلب بيانات بنكية.
               </p>
               <p className="text-sm leading-relaxed text-ink-muted">
                 يتعهد المسؤول بتقديم معلومات صحيحة ودقيقة (اسم التعاونية، رقم التعريف الموحد ICE، العنوان والأنشطة)، والحفاظ على سرية بيانات تسجيل الدخول الخاصة بأعضاء فريقه.
@@ -163,7 +163,7 @@ export default async function TermsPage({ params }: Props) {
                 <span>2.</span> Inscription, Accès & Période d'Essai
               </h2>
               <p className="text-sm leading-relaxed text-ink-muted">
-                L'accès au service est ouvert aux représentants des coopératives marocaines. Toute inscription donne droit à une <strong>période d'essai gratuit de 14 jours</strong> sans engagement et sans carte bancaire requise, incluant l'ensemble des modules du plan Professionnel.
+                L'accès au service est ouvert aux représentants des coopératives marocaines. Toute inscription donne droit à une <strong>période d'essai gratuit de 30 jours</strong> sans engagement et sans carte bancaire requise, incluant l'ensemble des modules du plan Professionnel.
               </p>
               <p className="text-sm leading-relaxed text-ink-muted">
                 L'utilisateur s'engage à renseigner des coordonnées réelles (dénomination, ICE, ville, adresse) et à préserver la stricte confidentialité des accès délégués aux collaborateurs de la coopérative.

@@ -42,11 +42,42 @@ export const listAllUsers = (q?: string) => prisma.user.findMany({ where: q ? { 
 
 export async function setOrgStatus(id: string, status: OrgStatus) { await prisma.organization.update({ where: { id }, data: { status } }); }
 
+export async function extendOrgTrial(orgId: string, additionalDays: number = 30) {
+  const sub = await prisma.subscription.findUnique({ where: { organizationId: orgId }, include: { plan: true } });
+  const defaultPlan = (await prisma.subscriptionPlan.findFirst({ where: { code: "PROFESSIONAL" } }))
+    ?? (await prisma.subscriptionPlan.findFirstOrThrow());
+
+  const now = Date.now();
+  const currentEnd = sub?.trialEndsAt ? sub.trialEndsAt.getTime() : now;
+  const baseTime = currentEnd > now ? currentEnd : now;
+  const newTrialEndsAt = new Date(baseTime + additionalDays * day);
+
+  await prisma.subscription.upsert({
+    where: { organizationId: orgId },
+    update: {
+      status: "TRIALING",
+      trialEndsAt: newTrialEndsAt,
+      currentPeriodEnd: newTrialEndsAt,
+    },
+    create: {
+      organizationId: orgId,
+      planId: defaultPlan.id,
+      status: "TRIALING",
+      trialEndsAt: newTrialEndsAt,
+      currentPeriodEnd: newTrialEndsAt,
+    },
+  });
+
+  // Réactiver la coopérative si elle était fermée ou suspendue
+  await prisma.organization.update({ where: { id: orgId }, data: { status: "ACTIVE" } });
+  return newTrialEndsAt;
+}
+
 export async function changeSubscription(orgId: string, p: { planCode: PlanCode; status: SubscriptionStatus; periodEnd?: string }) {
   const plan = await prisma.subscriptionPlan.findUnique({ where: { code: p.planCode } });
   if (!plan) throw new DomainError("planNotFound");
   const end = p.periodEnd ? new Date(p.periodEnd) : null;
-  const data = { planId: plan.id, status: p.status, currentPeriodEnd: end, ...(p.status === "TRIALING" ? { trialEndsAt: end ?? new Date(Date.now() + 14 * day) } : {}), ...(p.status === "CANCELLED" ? { cancelledAt: new Date() } : {}) };
+  const data = { planId: plan.id, status: p.status, currentPeriodEnd: end, ...(p.status === "TRIALING" ? { trialEndsAt: end ?? new Date(Date.now() + 30 * day) } : {}), ...(p.status === "CANCELLED" ? { cancelledAt: new Date() } : {}) };
   await prisma.subscription.upsert({ where: { organizationId: orgId }, update: data, create: { organizationId: orgId, ...data } });
 }
 

@@ -68,7 +68,7 @@
     "noAccount": "Créer ma coopérative",
     "register": "Créer mon compte",
     "registerTitle": "Créez votre coopérative sur CoopFlow",
-    "registerIntro": "14 jours d’essai, sans carte bancaire.",
+    "registerIntro": "30 jours d’essai, sans carte bancaire.",
     "orgName": "Nom de la coopérative",
     "fullName": "Votre nom complet",
     "confirmPassword": "Confirmez le mot de passe",
@@ -1259,7 +1259,8 @@
       "subscription": "Abonnement",
       "users": "Utilisateurs",
       "status": "Statut",
-      "created": "Créée le"
+      "created": "Créée le",
+      "actions": "Actions"
     },
     "stats": {
       "members": "Membres",
@@ -1292,7 +1293,22 @@
       "unlimited": "Laissez vide pour illimité."
     },
     "disable": "Désactiver",
-    "enable": "Réactiver"
+    "enable": "Réactiver",
+    "extendTrial": "+30j d'essai",
+    "activate": "Activer",
+    "suspendAction": "Suspendre",
+    "close": "Désactiver",
+    "manage": "Gérer",
+    "trialInfo": "Période d'essai",
+    "trialDaysLeft": "{days} jour(s) restant(s)",
+    "trialExpired": "Période d'essai expirée",
+    "extend30": "+ 30 jours",
+    "extend15": "+ 15 jours",
+    "statusSection": "Statut de la coopérative",
+    "closeTitle": "Désactiver (fermer) cette coopérative ?",
+    "closeMessage": "Le compte de la coopérative sera fermé et désactivé.",
+    "activateTitle": "Activer cette coopérative ?",
+    "activateMessage": "Le compte sera réactivé avec accès normal."
   },
   "suspended": {
     "title": "Compte suspendu",

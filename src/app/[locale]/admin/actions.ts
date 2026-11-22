@@ -7,19 +7,26 @@ import { requireSuperAdmin } from "@/lib/auth/session";
 import { prisma } from "@/lib/db/tenant";
 import { DomainError } from "@/lib/errors";
 import { planSchema, subscriptionSchema } from "@/schemas/modules";
-import { changeSubscription, setOrgStatus, setUserStatusAdmin, updatePlan } from "@/services/admin";
+import { changeSubscription, extendOrgTrial, setOrgStatus, setUserStatusAdmin, updatePlan } from "@/services/admin";
 
 export type FormState = { errors?: Record<string, string[] | undefined>; error?: string };
 const refresh = () => revalidatePath("/[locale]/admin", "layout");
 const log = (adminId: string, orgId: string | null, entity: string, entityId: string, changes: object) =>
   prisma.auditLog.create({ data: { organizationId: orgId, userId: adminId, action: "UPDATE", entityType: entity, entityId, changes } });
 
-export async function setOrgStatusAction(id: string, status: OrgStatus) {
+export async function setOrgStatusAction(id: string, status: OrgStatus, returnTo?: string) {
   const { user } = await requireSuperAdmin();
-  if (status !== "ACTIVE" && status !== "SUSPENDED") return;
+  if (status !== "ACTIVE" && status !== "SUSPENDED" && status !== "CLOSED") return;
   await setOrgStatus(id, status);
   await log(user.id, id, "platform_org_status", id, { status });
-  refresh(); redirect({ href: `/admin/organizations/${id}`, locale: await getLocale() });
+  refresh(); redirect({ href: returnTo || `/admin/organizations/${id}`, locale: await getLocale() });
+}
+
+export async function extendTrialAction(orgId: string, additionalDays: number = 30, returnTo?: string) {
+  const { user } = await requireSuperAdmin();
+  const newDate = await extendOrgTrial(orgId, additionalDays);
+  await log(user.id, orgId, "platform_trial_extended", orgId, { additionalDays, newTrialEndsAt: newDate });
+  refresh(); redirect({ href: returnTo || `/admin/organizations/${orgId}`, locale: await getLocale() });
 }
 
 export async function changeSubscriptionAction(orgId: string, _prev: FormState, form: FormData): Promise<FormState> {

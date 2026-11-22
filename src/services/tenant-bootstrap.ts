@@ -23,7 +23,7 @@ async function ensurePlatformData() {
 
 const slugify = (s: string) => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "cooperative";
 
-/** Crée la coopérative, ses rôles, son administrateur et un essai de 14 jours, en une transaction. */
+/** Crée la coopérative, ses rôles, son administrateur et un essai de 30 jours, en une transaction. */
 export async function createCooperative(p: { authId: string; email: string; fullName: string; orgName: string; locale: "fr" | "ar" }) {
   await ensurePlatformData();
   const plan = await prisma.subscriptionPlan.findUniqueOrThrow({ where: { code: "PROFESSIONAL" } });
@@ -37,7 +37,7 @@ export async function createCooperative(p: { authId: string; email: string; full
       await tx.rolePermission.createMany({ data: DEFAULT_PERMISSIONS[code].map((c) => ({ roleId: role.id, permissionId: perms.get(c)! })) });
     }
     await tx.user.create({ data: { authId: p.authId, email: p.email, fullName: p.fullName, locale: p.locale, organizationId: org.id, roleId: adminRoleId } });
-    await tx.subscription.create({ data: { organizationId: org.id, planId: plan.id, status: "TRIALING", trialEndsAt: new Date(Date.now() + 14 * 864e5) } });
+    await tx.subscription.create({ data: { organizationId: org.id, planId: plan.id, status: "TRIALING", trialEndsAt: new Date(Date.now() + 30 * 864e5) } });
     return org;
   });
 }

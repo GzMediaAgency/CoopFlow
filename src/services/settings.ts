@@ -204,6 +204,27 @@ export async function setUserStatus(ctx: Ctx, userId: string, status: UserStatus
   await audit(ctx, "UPDATE", "user", u.id, { status });
 }
 
+export async function deleteUser(ctx: Ctx, userId: string) {
+  const u = await target(ctx, userId);
+  if (u.id === ctx.user.id) throw new DomainError("selfAction");
+  if (u.role?.code === "ADMIN" && (await activeAdmins(ctx)) <= 1) throw new DomainError("lastAdmin");
+
+  // Supprimer de Supabase Auth si le compte existe dans Auth
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL, key = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (url && key && u.authId) {
+    try {
+      const admin = createClient(url, key, { auth: { persistSession: false } }).auth.admin;
+      await admin.deleteUser(u.authId);
+    } catch (e) {
+      console.warn("[deleteUser] Supabase auth deletion warning:", e);
+    }
+  }
+
+  // Supprimer définitivement de la base de données
+  await prisma.user.delete({ where: { id: u.id } });
+  await audit(ctx, "DELETE", "user", u.id, { email: u.email, fullName: u.fullName });
+}
+
 export async function updateOrganization(ctx: Ctx, d: z.infer<typeof orgSchema>) {
   await prisma.organization.update({ where: { id: ctx.org.id }, data: { name: d.name, type: d.type, sector: d.sector, foundedAt: d.foundedAt ? new Date(d.foundedAt) : null,
     address: d.address ?? null, city: d.city ?? null, region: d.region ?? null, phone: d.phone ?? null, ice: d.ice ?? null, taxId: d.taxId ?? null, registrationNumber: d.registrationNumber ?? null, description: d.description ?? null } });

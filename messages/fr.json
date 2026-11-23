@@ -1045,7 +1045,10 @@
       "limit": "Vous avez atteint la limite d’utilisateurs de votre plan.",
       "send": "Envoyer l’invitation",
       "fullName": "Nom complet",
-      "email": "Adresse e-mail"
+      "email": "Adresse e-mail",
+      "delete": "Supprimer",
+      "deleteTitle": "Supprimer cet utilisateur ?",
+      "deleteMessage": "L’accès de {name} à la coopérative sera définitivement révoqué et son compte supprimé."
     },
     "activity": {
       "count": "{count} action(s) enregistrée(s)",

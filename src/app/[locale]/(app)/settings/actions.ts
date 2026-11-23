@@ -7,7 +7,7 @@ import { redirect } from "@/i18n/routing";
 import { requirePermission } from "@/lib/auth/session";
 import { DomainError } from "@/lib/errors";
 import { billingSchema, inviteSchema, orgSchema } from "@/schemas/modules";
-import { inviteUser, setUserRole, setUserStatus, updateBilling, updateOrganization } from "@/services/settings";
+import { deleteUser, inviteUser, setUserRole, setUserStatus, updateBilling, updateOrganization } from "@/services/settings";
 
 export type FormState = { errors?: Record<string, string[] | undefined>; error?: string };
 const refresh = () => revalidatePath("/[locale]", "layout");
@@ -52,5 +52,12 @@ export async function changeStatus(userId: string, status: UserStatus) {
   if (status !== "ACTIVE" && status !== "DISABLED") return;
   let error = "";
   try { await setUserStatus(ctx, userId, status); } catch (e) { error = e instanceof DomainError ? e.code : "generic"; }
+  refresh(); await back(error);
+}
+
+export async function deleteUserAction(userId: string) {
+  const ctx = await requirePermission("settings:write");
+  let error = "";
+  try { await deleteUser(ctx, userId); } catch (e) { error = e instanceof DomainError ? e.code : "generic"; }
   refresh(); await back(error);
 }
